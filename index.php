@@ -11,5 +11,8 @@
     <p>buscador de personas</p>
     <input type="text" id="nom" value="">
     <input type="button" id="Idbusca" value="buscar"> 
+    <div id="info"></div>
+    <input type="button" id="per" value="personas">
+    <div id="nota"></div>
 </body>
 </html>

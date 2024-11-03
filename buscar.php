@@ -1,6 +1,6 @@
 <?php
 include "./connection.php";
-$query = "SELECT * FROM alumnos where apellido LIKE '%" . $_POST['apellido'] . "%'";
+$query = "SELECT * FROM alumnos where nombre LIKE '%" . $_POST['nombre'] . "%'";
 $result =  mysqli_query($connection, $query);
 
 
