@@ -1,6 +1,6 @@
 <?php
-include "./connection.php";
-$query = "SELECT * FROM alumnos where nombre LIKE '%" . $_POST['nombre'] . "%'";
+include "connection.php";
+$query = "SELECT * FROM alumnos WHERE nombre LIKE'%" . $_POST['nombre'] . "%'LIMIT 5";
 $result =  mysqli_query($connection, $query);
 
 
@@ -10,14 +10,6 @@ while($rec = mysqli_fetch_assoc($result)) {
     $rows[] = $rec;
 }
 
-
-
-/*
-echo "<pre>";
-print_r($rows);
-echo "</pre>";
-*/
-
 if(count($rows) == 0) {
     echo "{no se encontro}";  
 } else if(count($rows) == 1) {
@@ -25,11 +17,4 @@ if(count($rows) == 0) {
 } else {
     echo json_encode($rows) ;
 }
-
-
-//echo "ok";
-
-
-
-//print_r($_POST);
 ?>
