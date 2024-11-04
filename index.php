@@ -19,5 +19,7 @@
     <div id="aña"></div>
     <input type="button" id="borrar" value="borrar">
     <div id="quitar"></div>
+    <input type="button" id="modificar" value="modificar">
+    <div id="modi"></div>
 </body>
 </html>

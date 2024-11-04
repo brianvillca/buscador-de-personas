@@ -73,4 +73,13 @@ $(document).ready(function () {
             }
         })
     });
+    $('#modificar').click(function(){
+        $.ajax({
+            url:'./modifi.php',
+            dataType:'HTML',
+            success:function(modicasaio){
+                $('#modi').html(modicasaio)
+            }
+        })
+    });
 })
