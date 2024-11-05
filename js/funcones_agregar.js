@@ -7,8 +7,7 @@ $('#guardar').click(function () {
             nombre: $("#nombre").val(),
             apellido: $("#apellido").val(),
         },
-        dataType: "HTML",
-        success: function (data) {
+                success: function (data) {
             console.log(data);
         }
 

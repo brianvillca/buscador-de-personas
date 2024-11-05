@@ -9,13 +9,10 @@ $(document).ready(function(){
                 nuvnombre: $("#nuvnombre").val(),
                 nuvapellido:$("#nuvapellido").val(),
             },
-            dataType: "HTML",
             succes:function(dati){
                 console.log(dati);
                 alert(dati);
             }
         });
     });
-    })
-    
-    
+})

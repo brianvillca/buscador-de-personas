@@ -12,8 +12,16 @@ $(document).ready(function () {
                 let html = "<table border='1'><th>Nombre</th><th>Apellido</th></tr>";
                 if (data.length === 0) {
                     html = '<p>No se encontraron resultados.</p>';
-                } else {
-                    html += '<p>se encontro a la persona:</p>';
+                } 
+                else if(data.length > 1){
+                    html +='<p> se encontraron varias personas.</p>';
+                    data.forEach(function (item) {
+                        html += `</td><td>${item.nombre}</td><td> ${item.apellido}</td></tr>`;
+                    });
+                    html += "</table>";
+                }
+                else {
+                    html +='<p> se encontro a la persona.</p>';
                     data.forEach(function (item) {
                         html += `</td><td>${item.nombre}</td><td> ${item.apellido}</td></tr>`;
                     });
