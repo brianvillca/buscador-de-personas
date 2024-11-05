@@ -1,7 +1,7 @@
 $(document).ready(function(){
 $('#guardar').click(function () {
     $.ajax({
-        url: './C.añadir.php',
+        url: './consultas/C.añadir.php',
         type: "POST",
         data: {
             nombre: $("#nombre").val(),

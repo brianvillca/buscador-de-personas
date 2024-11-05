@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $('#Idbusca').click(function () {
         $.ajax({
-            url: './C.buscar.php',
+            url: './consultas/C.buscar.php',
             type: 'POST',
             data: { nombre: $("#nom").val() },
             datatype: "json",
@@ -25,7 +25,7 @@ $(document).ready(function () {
     });
     $('#per').click(function () {
         $.ajax({
-            url: './C.inforpersonas.php',
+            url: './consultas/C.inforpersonas.php',
             type: 'GET',
             dataType: "json",
             success: function (data) {
@@ -41,7 +41,7 @@ $(document).ready(function () {
     });
     $('#agregar').click(function () {
         $.ajax({
-            url: './agregar.php',
+            url: './formularios/agregar.php',
             dataType: "HTML",
             success: function (h) {
                 $('#aña').html(h)
@@ -51,7 +51,7 @@ $(document).ready(function () {
     });
     $('#guardar').click(function () {
         $.ajax({
-            url: './añadir.php',
+            url: './formularios/añadir.php',
             type: "POST",
             data: {
                 nombre: $("#nombre").val(),
@@ -66,7 +66,7 @@ $(document).ready(function () {
     });
     $('#borrar').click(function(){
         $.ajax({
-            url:'./eliminar.php',
+            url:'./formularios/eliminar.php',
             dataType:'HTML',
             success:function(jhonnydea){
             $('#quitar').html(jhonnydea)
@@ -75,7 +75,7 @@ $(document).ready(function () {
     });
     $('#modificar').click(function(){
         $.ajax({
-            url:'./modifi.php',
+            url:'./formularios/modifi.php',
             dataType:'HTML',
             success:function(modicasaio){
                 $('#modi').html(modicasaio)

@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $('#guardas').click(function(){
         $.ajax({
-            url: './C.modafi.php',
+            url: './consultas/C.modafi.php',
             type:"POST",
             data:{
                 nombre: $("#nombre").val(),

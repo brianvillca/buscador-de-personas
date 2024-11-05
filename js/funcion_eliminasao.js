@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $('#suprimir').click(function () {
         $.ajax({
-            url: './C.exterminar.php',
+            url: './consultas/C.exterminar.php',
             type: "POST",
             data: {
                 nombre: $("#nombre").val(),
