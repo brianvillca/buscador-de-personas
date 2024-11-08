@@ -10,9 +10,9 @@ while($rec = mysqli_fetch_assoc($result)) {
     $rows[] = $rec;
 }
 
-if(count($rows) == 0) {
-    echo "{no se encontro}";  
-} else if(count($rows) == 1) {
+if(empty($rows)) {
+    echo "no se encontró nada";  
+} else if(!empty($rows)) {
     echo json_encode($rows) ;
 } else {
     echo json_encode($rows) ;

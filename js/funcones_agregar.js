@@ -7,8 +7,12 @@ $('#guardar').click(function () {
             nombre: $("#nombre").val(),
             apellido: $("#apellido").val(),
         },
-                success: function (data) {
-            console.log(data);
+                success: (response) => {
+            console.log(response);
+            response === "exists" ?
+            console.log("usuario encontrado, por lo tanto no sera agregado") : 
+            response !== "exists" ? console.log("usuario no encontrado, por lo tanto sera subido a la base de datos") 
+            : console.log("ERROR");
         }
 
     });
